@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse simple Foodies recipes for breakfast, lunch and dinner. Search recipes and filter by meal category.">
+  <title>Easy Recipes | Breakfast, Lunch and Dinner | Foodies</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="Home.html" aria-label="Foodies home">
+    <img loading="lazy" decoding="async" src="images/logo.jpg" alt="Foodies logo">
+    <span>Foodies</span>
+  </a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="Home.html">Home</a>
+    <a href="About.html">About us</a>
+    <a href="Service.html">Recipes</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-heading"><p class="eyebrow">COOK SOMETHING DELICIOUS</p><h1>Recipes for every part of the day</h1>
+    <p>Start with one of these easy favourites. Read through the ingredients before you begin.</p></section>
+  <section class="recipe-tools" aria-label="Find recipes">
+    <label for="recipeSearch">Search recipes</label>
+    <input id="recipeSearch" type="search" placeholder="Try pancakes or chicken" aria-label="Search recipes">
+    <label for="recipeCategory">Filter by meal</label>
+    <select id="recipeCategory"><option value="all">All categories</option><option value="breakfast">Breakfast</option><option value="lunch">Lunch</option><option value="dinner">Dinner</option></select>
+    <label for="recipeSort">Sort</label>
+    <select id="recipeSort"><option value="az">Name: A to Z</option><option value="za">Name: Z to A</option></select>
+    <p id="recipeCount" class="form-note" aria-live="polite">Showing recipes</p>
+  </section>
+  <section id="recipeGrid" class="recipe-grid" aria-live="polite"></section>
+  <noscript><p>Please enable JavaScript to search and display the recipe collection.</p></noscript>
+</main>
+<script src="js/recipes-data.js" defer></script>
+<script src="js/recipes.js" defer></script>
+
+<footer class="site-footer"><p>&copy; 2026 Foodies. Made for people who love good food.</p></footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Form</title>
+
+</head>
+<body>
+    <form><!-- input fields onto submittable form -->
+        <labal for=" name">Name</labal>
+        <input type=" text" id= "name" name="name"
+
+        <label for="email">Email</lable>
+        <input type="text" id="email">
+
+        <label for="message">Message</label>
+        <textarea id="text" name="email"></textarea>
+
+        <botton>
+
+
+        </botton>
+
+    </form>
+</body>
+</html>

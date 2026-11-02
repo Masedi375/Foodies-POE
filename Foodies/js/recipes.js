@@ -1,0 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+ const grid=document.getElementById("recipeGrid"), search=document.getElementById("recipeSearch"), category=document.getElementById("recipeCategory"), sort=document.getElementById("recipeSort"), count=document.getElementById("recipeCount");
+ if(!grid || !window.foodiesRecipes) return;
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function render(){let list=window.foodiesRecipes.filter(r=>(category.value==='all'||r.category===category.value)&&(`${r.name} ${r.category} ${r.ingredients.join(' ')}`).toLowerCase().includes(search.value.trim().toLowerCase())); list.sort((a,b)=>sort.value==='za'?b.name.localeCompare(a.name):a.name.localeCompare(b.name)); count.textContent=`Showing ${list.length} of ${window.foodiesRecipes.length} recipes`; grid.innerHTML=list.length?list.map(r=>`<article class="recipe-card"><img loading="lazy" decoding="async" src="${esc(r.image)}" alt="${esc(r.alt)}"><div class="recipe-body"><p class="eyebrow">${esc(r.category.toUpperCase())} · ${esc(r.time)}</p><h2>${esc(r.name)}</h2><details><summary>View ingredients and method</summary><h3>Ingredients</h3><ul>${r.ingredients.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h3>Method</h3><ol>${r.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></details></div></article>`).join(''):'<p class="empty-state">No recipes match your search. Try another keyword or category.</p>'; }
+ [search,category,sort].forEach(el=>el.addEventListener('input',render)); render();
+});

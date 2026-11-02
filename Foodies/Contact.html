@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Foodies with a recipe question, suggestion, website comment or general message.">
+  <title>Contact Foodies | Send Us a Message</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="Home.html" aria-label="Foodies home">
+    <img loading="lazy" decoding="async" src="images/logo.jpg" alt="Foodies logo">
+    <span>Foodies</span>
+  </a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="Home.html">Home</a>
+    <a href="About.html">About us</a>
+    <a href="Service.html">Recipes</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="contact-layout">
+  <section class="contact-intro">
+    <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+    <h1>Let's talk food.</h1>
+    <p>Have a question, suggestion or recipe idea? Send the Foodies team a message using the form.</p>
+    <div class="contact-details">
+      <p><strong>Address</strong><br><a href="https://www.google.com/maps/search/?api=1&query=17337+Alana+Street%2C+Protea+Glen+Ext+16+Phase+4%2C+Johannesburg%2C+Gauteng%2C+South+Africa" target="_blank" rel="noopener noreferrer">17337 Alana Street, Protea Glen Ext 16 Phase 4, Johannesburg, Gauteng, South Africa</a></p>
+      <p><strong>Phone</strong><br><a href="tel:+27682130580">068 213 0580</a></p>
+      <p><strong>Email</strong><br><a href="mailto:foodies_2026@gmail.com">foodies_2026@gmail.com</a></p>
+    </div>
+  </section>
+  <section class="form-card">
+    <h2>Contact form</h2>
+    <p class="form-note">Complete the fields below and we will be happy to hear from you.</p>
+    <form id="contactForm" action="mailto:foodies_2026@gmail.com" method="post" enctype="text/plain">
+      <div class="form-field"><label for="fullName">Full name <span aria-hidden="true">*</span></label><input type="text" id="fullName" name="fullName" placeholder="Enter your full name" autocomplete="name" required minlength="2"></div>
+      <div class="form-field"><label for="email">Email address <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required></div>
+      <div class="form-field"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" maxlength="20" placeholder="e.g. 068 123 4567" autocomplete="tel" pattern="[0-9+() -]{7,20}"></div>
+      <div class="form-field"><label for="subject">Subject <span aria-hidden="true">*</span></label>
+        <select id="subject" name="subject" required><option value="">Choose a subject</option><option>Recipe question</option><option>Website feedback</option><option>Recipe suggestion</option><option>Other enquiry</option></select>
+      </div>
+      <div class="form-field"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" maxlength="1500" rows="5" placeholder="Write your message here..." required minlength="10"></textarea></div>
+      <button class="button submit-button" type="submit">Send message</button>
+      <p class="form-note" id="formStatus" role="status" aria-live="polite">Your email app will open with your message ready to send.</p>
+    </form>
+  </section>
+  <section class="location-card" aria-labelledby="location-heading">
+    <h2 id="location-heading">Find Foodies</h2>
+    <p>17337 Alana Street, Protea Glen Ext 16 Phase 4, Johannesburg, Gauteng, South Africa</p>
+    <div class="map-frame">
+      <iframe title="Map showing the Foodies address in Protea Glen, Johannesburg" src="https://www.google.com/maps?q=17337+Alana+Street%2C+Protea+Glen+Ext+16+Phase+4%2C+Johannesburg%2C+Gauteng%2C+South+Africa&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <p><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=17337+Alana+Street%2C+Protea+Glen+Ext+16+Phase+4%2C+Johannesburg%2C+Gauteng%2C+South+Africa" target="_blank" rel="noopener noreferrer">Open this address in Google Maps</a></p>
+  </section>
+</main>
+<script src="js/contact.js"></script>
+
+<footer class="site-footer"><p>&copy; 2026 Foodies. Made for people who love good food.</p></footer>
+</body>
+</html>
